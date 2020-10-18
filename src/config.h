@@ -15,6 +15,11 @@
 #define UPDATE_PIN 14
 #define POWER_PIN 12
 
+// In case of using TMP100 and not having an address defined, this address is used
+#if !defined(TMP100_I2C_ADDRESS)
+#define TMP100_I2C_ADDRESS 0b1001101
+#endif
+
 extern IPAddress network_ip;
 extern IPAddress network_gateway;
 extern IPAddress network_dns;
